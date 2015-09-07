@@ -1,0 +1,43 @@
+package questao7;
+
+import java.util.Scanner;
+
+public class VeiculoTest {
+	static Scanner scan = new Scanner(System.in);	
+
+	public static void main(String[] args) {	
+		
+		VeiculoDeCarga vc = new VeiculoDeCarga("ABC123", "Ford", "Ranger", 2012, 10000, 10500, 2);
+		VeiculoDePasseio vp = new VeiculoDePasseio("DEF456", "Vw", "Golf", 2014, 3000, 6000, 5);
+		
+		System.out.printf("Digite 1 veiculo de carga e 2 veiculo passeio: ");
+		int x=scan.nextInt();
+		switch (x) {
+			case 1:
+		    System.out.println("Veiculo de carga:");		    
+		    System.out.println("Placa: "+vc.placa);
+		    System.out.println("Marca: "+vc.marca);
+		    System.out.println("Modelo: "+vc.modelo);
+		    System.out.println("Ano: "+vc.ano);
+		    System.out.println("KM Final: "+vc.kmFinal);
+		    System.out.println("KM Inicial: "+vc.kmInicial);
+		    System.out.println("KM Rodados: "+vc.valorKmRodado);
+		    System.out.println("Valor da locação: "+vc.valorDaLocacao(10000, 10500, 2));
+		    break;
+		    
+			case 2:
+			System.out.println("Veiculo de carga:");
+			System.out.println("Placa: "+vp.placa);
+			System.out.println("Marca: "+vp.marca);
+			System.out.println("Modelo: "+vp.modelo);
+			System.out.println("Ano: "+vp.ano);
+			System.out.println("KM Final: "+vp.kmFinal);
+			System.out.println("KM Inicial: "+vp.kmInicial);
+			System.out.println("KM Rodados: "+vp.valorKmRodado);
+			System.out.println("Valor da locação: "+vc.valorDaLocacao(3000, 6000, 6));
+			break;
+			default:
+				System.out.println("Numero inválido!");
+		}
+	}
+}
