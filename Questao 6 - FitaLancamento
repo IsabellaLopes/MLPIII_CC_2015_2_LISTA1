@@ -1,0 +1,9 @@
+package questao6;
+
+public class FitaLancamento extends Fita{
+	
+	public FitaLancamento(String titulo, double precolocacao) {
+		super(titulo, precolocacao);
+	}
+
+}
