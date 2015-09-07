@@ -1,0 +1,33 @@
+package questao6;
+
+import java.util.Scanner;
+
+public class FitaTest {
+	static Scanner scan = new Scanner(System.in);	
+
+	public static void main(String[] args) {	
+		
+		FitaInfantil fi = new FitaInfantil("Cinderela", 15.30 + ((15.30 * 20)/100));
+		FitaLancamento fl = new FitaLancamento ("Exodo", 27.90 - ((27.90 * 40)/100));
+		
+		System.out.printf("Digite 1 fita infantil e 2 fita lacamento: ");
+		int x=scan.nextInt();
+		switch (x) {
+			case 1:
+		    System.out.println("Fita Infantil");		    
+		    System.out.println("Titulo: "+fi.titulo);
+		    System.out.println("Preço de locacao: "+fi.precolocacao);
+		    break;
+		    
+			case 2:
+			System.out.println("Fita de lancamento");
+			System.out.println("Titulo: "+fl.titulo);
+			System.out.println("Preco de locacao: "+fl.precolocacao);
+			break;
+			default:
+				System.out.println("Numero inválido!");
+		}
+		
+
+	}
+}
