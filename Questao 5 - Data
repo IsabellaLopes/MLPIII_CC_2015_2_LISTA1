@@ -1,0 +1,57 @@
+package questao5;
+
+public class Data {
+	
+	private int dia;
+	private int mes;
+	private int ano;
+	
+	public int getDia(){
+		return dia;
+	}
+	public int getMes(){
+		return mes;
+	}
+	public int getAno(){
+		return ano;
+	}
+	
+	public void SetDia(int dia){		
+		if(dia > 0 && dia < 32){
+			this.dia=dia;	
+		}else{			
+		System.out.printf("Dia invalido ");
+		}
+	}
+	
+	public void SetMes(int mes){
+		if(mes > 0 && mes < 13){
+		this.mes=mes;
+	    }else{
+	    System.out.printf("Mes invalido ");
+	    }
+	}
+	
+	public void SetAno(int ano){
+		if(ano > 0 ){
+		this.ano=ano;	
+		}else{
+		System.out.printf("Ano invalido ");	
+		}
+	}
+	
+	
+	public Data(int dia, int mes, int ano) {
+	this.dia = dia;
+	this.mes = mes;
+	this.ano = ano;
+	}			
+
+	public Data() {
+	}
+
+	public String toString() {
+	return dia + "/" + mes + "/" + ano;
+	}	
+
+}
