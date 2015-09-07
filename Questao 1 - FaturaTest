@@ -1,0 +1,27 @@
+package questao1;
+
+import java.util.Scanner;
+
+public class FaturaTest {
+	static Scanner input = new Scanner(System.in);	
+	
+	public static void main(String[] args) {
+		
+		Fatura F = new Fatura();	
+		double total = 0;
+		
+		System.out.println("Digita a descrição do produto: ");
+		String descricao = input.next();
+		F.setDescricao(descricao);
+		System.out.println("Insira o preço: ");
+		F.setPrecoItem(input.nextDouble());
+		System.out.println("Insira a quantidade: ");
+		F.setQntComprada(input.nextInt());
+		total=F.getValorFatura();
+		
+		System.out.println("Descrição: "+F.getDescricao());
+		System.out.println("Quantidade: "+F.getQntComprada());
+		System.out.println("Preço: "+F.getPrecoItem());
+		System.out.println("Total Fatura: "+total);
+	}
+}
