@@ -1,0 +1,12 @@
+package questao7;
+
+public class VeiculoDePasseio extends Veiculo {
+	
+	public VeiculoDePasseio(String placa, String marca, String modelo, int ano, double kmFinal, double kmInicial, double valorKmRodado){
+		super (modelo, modelo, modelo, ano, valorKmRodado, valorKmRodado, valorKmRodado);
+	}
+
+	public int qntPortas;
+	public boolean ar;
+	
+}
