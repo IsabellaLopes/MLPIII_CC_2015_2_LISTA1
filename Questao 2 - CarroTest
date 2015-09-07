@@ -1,0 +1,34 @@
+package questao2;
+
+import java.util.Scanner;
+
+public class CarroTest {
+	static Scanner scan = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+		Carro c = new Carro();		
+		
+		System.out.println("Digite a cor do veiculo: ");
+		String cor = scan.next();
+		c.setCor(cor);
+		System.out.println("Digite o modelo do veiculo: ");
+		String modelo = scan.next();
+		c.setModelo(modelo);
+		System.out.println("Deseja ligar o carro? 1 - s || 0 - n");
+		int x = 0;
+		x = scan.nextInt();
+		if(x == 1){
+			c.liga();			
+			}else{
+				c.desliga();
+				System.exit(0);
+			}
+		System.out.println("Velocidade atual: ");
+		c.setVelocidadeA(scan.nextDouble());
+		System.out.println("Acelerar: ");
+		int a = 0;
+		a = scan.nextInt();
+		c.acelera(a);
+	}
+}
