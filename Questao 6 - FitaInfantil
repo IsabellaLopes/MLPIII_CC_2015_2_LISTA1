@@ -1,0 +1,9 @@
+package questao6;
+
+public class FitaInfantil extends Fita {
+	
+	public FitaInfantil(String titulo, double precolocacao) {
+		super(titulo, precolocacao);
+	}
+
+}
