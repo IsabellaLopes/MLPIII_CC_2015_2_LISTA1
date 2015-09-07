@@ -1,0 +1,27 @@
+package questao7;
+
+public abstract class Veiculo {
+
+	protected String placa;
+	protected String marca;
+	protected String modelo;
+	protected int ano;
+	protected double kmFinal;
+	protected double kmInicial;
+	protected double valorKmRodado;
+	
+	public Veiculo(String placa, String marca, String modelo, int ano, double kmFinal, double kmInicial, double valorKmRodado){
+		this.placa = placa;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.ano = ano;
+		this.kmFinal = kmFinal;
+		this.kmInicial = kmInicial;
+		this.valorKmRodado = valorKmRodado;
+    }
+	
+	public double valorDaLocacao( double kmInicial,double kmFinal, double valorKmRodado){
+		return (kmFinal - kmInicial) * valorKmRodado;
+	}
+
+}
