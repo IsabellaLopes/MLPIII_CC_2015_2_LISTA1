@@ -1,0 +1,51 @@
+package questao2;
+
+public class Carro {
+
+	private String cor,modelo;
+	private double velocidadeA, velocidadeM;
+
+	public String getCor(){
+		return cor;
+	}
+	public String getModelo(){
+		return modelo;
+	}
+	public double getVelocidadeA(){
+		return velocidadeA;
+	}
+	public double getVelocidadeM(){
+		return velocidadeM;
+	}
+	
+	public void setCor(String cor){
+		this.cor = cor;
+	}
+	
+	public void setModelo(String modelo){
+		this.modelo = modelo;
+	}
+	public void setVelocidadeA(double velocidadeA){
+		this.velocidadeA = velocidadeA;
+	}
+	public void setVelocidadeM(double velocidadeM){
+		this.velocidadeM = velocidadeM;
+	}
+
+	 void liga(){
+		System.out.println("O carro está ligado");
+	  }
+	 void desliga(){
+		 System.out.println("O carro está desligado");
+	 }
+	 
+	 void acelera(double qnt){
+		double velocidadeN = this.velocidadeA + qnt;
+		this.velocidadeA = velocidadeN;
+		if(velocidadeN > 80){
+			System.out.println("Limite atingido !!!");
+			velocidadeN = 80;
+		}
+	  }
+	
+}
