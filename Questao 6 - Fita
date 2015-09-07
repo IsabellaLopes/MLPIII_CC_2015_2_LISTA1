@@ -1,0 +1,12 @@
+package questao6;
+
+public abstract class Fita {
+	protected String titulo;
+	protected double precolocacao;
+		
+	public Fita (String titulo, double precolocacao) {
+		this.titulo = titulo;
+		this.precolocacao = precolocacao;
+	}
+
+}
