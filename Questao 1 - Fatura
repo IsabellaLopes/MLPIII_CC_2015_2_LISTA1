@@ -1,0 +1,51 @@
+package questao1;
+
+public class Fatura {
+	
+	private String numero;
+	private String descricao;
+	private int qntComprada;
+	private double precoItem;
+	
+	Fatura(){}
+	Fatura(String numero, String descricao, int qntComprada, double precoItem){
+	this.numero = numero;
+	this.descricao = descricao;
+	this.qntComprada = qntComprada;
+	this.precoItem = precoItem;
+	}
+		
+     public String getNumero(){
+    	 return numero;
+     }     
+     public String getDescricao(){
+    	 return descricao;
+     }     
+     public int getQntComprada(){
+    	 return qntComprada;
+     }     
+     public double getPrecoItem(){
+    	 return precoItem;
+     }
+     
+     public void setNumero(String numero){
+    	 this.numero = numero;
+     }     
+     public void setDescricao(String descricao){
+    	 this.descricao = descricao;
+     }     
+     public void setQntComprada(int qntComprada){
+    	 this.qntComprada = qntComprada;
+     }     
+     public void setPrecoItem(double precoItem){
+    	 this.precoItem = precoItem;
+     }
+	
+	 public double getValorFatura(){
+		 double VF = precoItem*qntComprada;
+		 if(qntComprada<0){this.qntComprada=0;}
+		 if(precoItem<0){this.precoItem=0.0;}
+		 return VF;
+	 }
+	
+}
